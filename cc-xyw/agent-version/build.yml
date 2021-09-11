@@ -1,0 +1,361 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka-server
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: eureka-server
+  template:
+    metadata:
+      labels:
+        app: eureka-server
+    spec:
+      containers:
+        - name: eureka-server
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-eureka-server:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 8761
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+        - name: api-gateway
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-api-gateway:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9999
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-user-service:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 12401
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meeting-service
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: meeting-service
+  template:
+    metadata:
+      labels:
+        app: meeting-service
+    spec:
+      containers:
+        - name: meeting-service
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-meeting-service:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 12301
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: article-service
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: article-service
+  template:
+    metadata:
+      labels:
+        app: article-service
+    spec:
+      containers:
+        - name: article-service
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-article-service:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 12803
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pcmember-service
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: pcmember-service
+  template:
+    metadata:
+      labels:
+        app: pcmember-service
+    spec:
+      containers:
+        - name: pcmember-service
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-pcmember-service:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 12305
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: review-service
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: review-service
+  template:
+    metadata:
+      labels:
+        app: review-service
+    spec:
+      containers:
+        - name: review-service
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-review-service:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 12306
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-service
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: message-service
+  template:
+    metadata:
+      labels:
+        app: message-service
+    spec:
+      containers:
+        - name: message-service
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-message-service:v2
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "collector.trace.svc.cluster.local:3200"
+          ports:
+            - containerPort: 12406
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cyber-frontend
+  namespace: ase-ns-14
+spec:
+  selector:
+    matchLabels:
+      app: cyber-frontend
+  template:
+    metadata:
+      labels:
+        app: cyber-frontend
+    spec:
+      containers:
+        - name: cyber-frontend
+          image: registry.cn-hangzhou.aliyuncs.com/akasakaisami/cc-xyw-frontend:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eureka-server
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: eureka-server
+  ports:
+    - protocol: TCP
+      port: 8761
+      targetPort: 8761
+      nodePort: 30001
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-gateway
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: api-gateway
+  ports:
+    - protocol: TCP
+      port: 9999
+      targetPort: 9999
+      nodePort: 30009
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cyber-frontend
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: cyber-frontend
+  ports:
+    - protocol: TCP
+      port: 1204
+      targetPort: 80
+      nodePort: 30004
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: article-service
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: article-service
+  ports:
+    - protocol: TCP
+      port: 12803
+      targetPort: 12803
+      nodePort: 30803
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: meeting-service
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: meeting-service
+  ports:
+    - protocol: TCP
+      port: 12301
+      targetPort: 12301
+      nodePort: 32301
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: message-service
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: message-service
+  ports:
+    - protocol: TCP
+      port: 12406
+      targetPort: 12406
+      nodePort: 32406
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pcmember-service
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: pcmember-service
+  ports:
+    - protocol: TCP
+      port: 12305
+      targetPort: 12305
+      nodePort: 32305
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: review-service
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: review-service
+  ports:
+    - protocol: TCP
+      port: 12306
+      targetPort: 12306
+      nodePort: 32306
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  namespace: ase-ns-14
+spec:
+  type: NodePort
+  selector:
+    app: user-service
+  ports:
+    - protocol: TCP
+      port: 12401
+      targetPort: 12401
+      nodePort: 32401
