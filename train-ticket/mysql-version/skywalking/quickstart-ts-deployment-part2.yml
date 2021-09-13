@@ -19,7 +19,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18767
           resources:
@@ -59,7 +59,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16112
           resources:
@@ -98,7 +98,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16113
           resources:
@@ -137,7 +137,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16114
           resources:
@@ -176,7 +176,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16115
           resources:
@@ -215,7 +215,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18888
           resources:
@@ -254,7 +254,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 15680
           resources:
@@ -293,7 +293,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18885
           resources:
@@ -332,7 +332,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 15679
           resources:
@@ -371,7 +371,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16110
           resources:
@@ -410,7 +410,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16111
           resources:
@@ -449,7 +449,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12347
           resources:
@@ -488,7 +488,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12386
           resources:
@@ -527,7 +527,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18855
           resources:
@@ -566,7 +566,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18856
           resources:
@@ -605,7 +605,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18673
           resources:
@@ -644,7 +644,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12340
           resources:
@@ -683,7 +683,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12862
           resources:
@@ -722,7 +722,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 17853
           resources:
@@ -761,7 +761,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12032
           resources:
@@ -800,7 +800,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12031
           resources:
@@ -839,7 +839,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 19001
           resources:
@@ -878,7 +878,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 14569
           resources:
@@ -917,7 +917,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 14568
           resources:
@@ -956,7 +956,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16579
           resources:
@@ -995,7 +995,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18886
           resources:
@@ -1034,7 +1034,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 14578
           resources:
@@ -1073,16 +1073,16 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 11178
           resources:
             requests:
-              cpu: 250m
-              memory: 250Mi
-            limits:
               cpu: 500m
               memory: 500Mi
+            limits:
+              cpu: 700m
+              memory: 700Mi
           readinessProbe:
             tcpSocket:
               port: 11178
@@ -1112,7 +1112,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 18898
           resources:
@@ -1151,7 +1151,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 11188
           resources:
@@ -1190,7 +1190,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12342
           resources:
@@ -1229,16 +1229,16 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12345
           resources:
             requests:
-              cpu: 250m
-              memory: 250Mi
-            limits:
               cpu: 500m
               memory: 500Mi
+            limits:
+              cpu: 700m
+              memory: 700Mi
           readinessProbe:
             tcpSocket:
               port: 12345
@@ -1268,7 +1268,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16108
           resources:
@@ -1307,7 +1307,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 15681
           resources:
@@ -1346,7 +1346,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 14567
           resources:
@@ -1385,7 +1385,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16346
           resources:
@@ -1424,7 +1424,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 14322
           resources:
@@ -1463,16 +1463,16 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12346
           resources:
             requests:
-              cpu: 250m
-              memory: 250Mi
-            limits:
               cpu: 500m
               memory: 500Mi
+            limits:
+              cpu: 700m
+              memory: 700Mi
           readinessProbe:
             tcpSocket:
               port: 12346
@@ -1498,11 +1498,11 @@ spec:
     spec:
       containers:
         - name: ts-verification-code-service
-          image: registry.cn-hangzhou.aliyuncs.com/microservicedemos/ts-verification-code-service:all-pass
+          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-verification-code-service:mysql
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 15678
           resources:
@@ -1541,7 +1541,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: "skywalking-oap.trace.svc.cluster.local:11800"
+              value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 16101
           resources:

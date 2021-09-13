@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ts-admin-basic-info-service
-          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-admin-basic-info-service:mysql
+          image: codewisdom/ts-admin-basic-info-service:not_sensitive 
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
@@ -445,7 +445,7 @@ spec:
     spec:
       containers:
         - name: ts-contacts-service
-          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-contacts-service:mysql
+          image: codewisdom/ts-contacts-service:noauth
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
@@ -1078,11 +1078,11 @@ spec:
             - containerPort: 11178
           resources:
             requests:
-              cpu: 250m
-              memory: 250Mi
-            limits:
               cpu: 500m
               memory: 500Mi
+            limits:
+              cpu: 700m
+              memory: 700Mi
           readinessProbe:
             tcpSocket:
               port: 11178
@@ -1225,7 +1225,7 @@ spec:
     spec:
       containers:
         - name: ts-station-service
-          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-station-service:mysql
+          image: kanakami/ts-station-service:hystrix_repeat_failure
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
@@ -1234,11 +1234,11 @@ spec:
             - containerPort: 12345
           resources:
             requests:
-              cpu: 250m
-              memory: 250Mi
-            limits:
               cpu: 500m
               memory: 500Mi
+            limits:
+              cpu: 700m
+              memory: 700Mi
           readinessProbe:
             tcpSocket:
               port: 12345
@@ -1468,11 +1468,11 @@ spec:
             - containerPort: 12346
           resources:
             requests:
-              cpu: 250m
-              memory: 250Mi
-            limits:
               cpu: 500m
               memory: 500Mi
+            limits:
+              cpu: 700m
+              memory: 700Mi
           readinessProbe:
             tcpSocket:
               port: 12346
@@ -1498,7 +1498,7 @@ spec:
     spec:
       containers:
         - name: ts-verification-code-service
-          image: registry.cn-hangzhou.aliyuncs.com/microservicedemos/ts-verification-code-service:all-pass
+          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-verification-code-service:mysql
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
