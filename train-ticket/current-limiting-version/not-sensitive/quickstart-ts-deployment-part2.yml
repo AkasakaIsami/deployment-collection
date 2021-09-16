@@ -1225,7 +1225,7 @@ spec:
     spec:
       containers:
         - name: ts-station-service
-          image: kanakami/ts-station-service:hystrix_repeat_failure
+          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-station-service:mysql
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
