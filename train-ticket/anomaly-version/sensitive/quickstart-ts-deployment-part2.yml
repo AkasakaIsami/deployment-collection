@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ts-admin-basic-info-service
-          image: kanakami/ts-admin-basic-info-service:hystrix_repeat_failure_sensitive
+          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-admin-basic-info-service:hystrix_repeat_failure_sensitive
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES

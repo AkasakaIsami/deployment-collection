@@ -445,7 +445,7 @@ spec:
     spec:
       containers:
         - name: ts-contacts-service
-          image: codewisdom/ts-contacts-service:noauth
+          image: registry.cn-hangzhou.aliyuncs.com/maturity/ts-contacts-service:mysql
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
