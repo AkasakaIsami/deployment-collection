@@ -29,7 +29,6 @@ spec:
               cpu: 50m
               memory: 100Mi
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -61,7 +60,6 @@ spec:
               cpu: 50m
               memory: 100Mi
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -94,7 +92,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -127,7 +124,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -160,7 +156,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -193,7 +188,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -225,9 +219,7 @@ spec:
               cpu: 50m
               memory: 100Mi
 
-
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -292,8 +284,6 @@ spec:
               memory: 100Mi
 
 ---
-
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -326,7 +316,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -359,7 +348,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -392,7 +380,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -425,7 +412,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -458,7 +444,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -491,7 +476,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -524,7 +508,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -551,9 +534,7 @@ spec:
               cpu: 50m
               memory: 100Mi
 
-
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -585,7 +566,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -618,7 +598,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -651,7 +630,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -684,7 +662,6 @@ spec:
               memory: 100Mi
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -740,7 +717,6 @@ spec:
   selector:
     app: ts-auth-mysql
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -753,7 +729,6 @@ spec:
     app: ts-route-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -766,7 +741,6 @@ spec:
     app: ts-contacts-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -779,7 +753,6 @@ spec:
     app: ts-order-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -803,8 +776,6 @@ spec:
     app: ts-config-mysql
 
 ---
-
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -817,7 +788,6 @@ spec:
     app: ts-station-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -830,7 +800,6 @@ spec:
     app: ts-train-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -843,7 +812,6 @@ spec:
     app: ts-travel-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -856,7 +824,6 @@ spec:
     app: ts-travel2-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -869,7 +836,6 @@ spec:
     app: ts-price-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -882,7 +848,6 @@ spec:
     app: ts-security-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -895,7 +860,6 @@ spec:
     app: ts-inside-payment-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -908,7 +872,6 @@ spec:
     app: ts-payment-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -921,7 +884,6 @@ spec:
     app: ts-assurance-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -934,7 +896,6 @@ spec:
     app: ts-ticket-office-mongo
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -947,7 +908,6 @@ spec:
     app: ts-voucher-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -960,7 +920,6 @@ spec:
     app: ts-food-map-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -973,7 +932,6 @@ spec:
     app: ts-consign-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -986,7 +944,6 @@ spec:
     app: ts-consign-price-mysql
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
