@@ -222,7 +222,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: eureka-serverƒ
+  name: eureka-server
   namespace: ase-ns-14
 spec:
   type: NodePort
