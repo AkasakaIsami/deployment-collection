@@ -26,8 +26,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 
 ---
 apiVersion: apps/v1
@@ -58,8 +58,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 
 ---
 apiVersion: apps/v1
@@ -90,8 +90,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 
 ---
 apiVersion: apps/v1
@@ -122,8 +122,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -153,8 +153,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -184,8 +184,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -215,8 +215,8 @@ spec:
               cpu: 400m
               memory: 400Mi
             limits:
-              cpu: 400m
-              memory: 800Mi
+              cpu: 2000m
+              memory: 2000Mi
 
 ---
 apiVersion: v1
