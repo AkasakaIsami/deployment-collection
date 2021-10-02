@@ -23,12 +23,11 @@ spec:
             - containerPort: 8761
           resources:
             requests:
-              cpu: 400m
-              memory: 400Mi
+              cpu: 800m
+              memory: 800Mi
             limits:
-              cpu: 2000m
-              memory: 2000Mi
-
+              cpu: 3000m
+              memory: 3000Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -87,11 +86,11 @@ spec:
             - containerPort: 12301
           resources:
             requests:
-              cpu: 400m
-              memory: 400Mi
+              cpu: 800m
+              memory: 800Mi
             limits:
-              cpu: 2000m
-              memory: 2000Mi
+              cpu: 3000m
+              memory: 3000Mi
 
 ---
 apiVersion: apps/v1
@@ -150,11 +149,11 @@ spec:
             - containerPort: 12305
           resources:
             requests:
-              cpu: 400m
-              memory: 400Mi
+              cpu: 800m
+              memory: 800Mi
             limits:
-              cpu: 2000m
-              memory: 2000Mi
+              cpu: 3000m
+              memory: 3000Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -212,11 +211,11 @@ spec:
             - containerPort: 12406
           resources:
             requests:
-              cpu: 400m
-              memory: 400Mi
+              cpu: 800m
+              memory: 800Mi
             limits:
-              cpu: 2000m
-              memory: 2000Mi
+              cpu: 3000m
+              memory: 3000Mi
 
 ---
 apiVersion: v1
