@@ -21,6 +21,13 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 8761
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 
 ---
 apiVersion: apps/v1
@@ -46,6 +53,13 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12401
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 
 ---
 apiVersion: apps/v1
@@ -71,6 +85,13 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12301
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 
 ---
 apiVersion: apps/v1
@@ -96,7 +117,13 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12803
-
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -121,7 +148,13 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12305
-
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -146,6 +179,13 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12306
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -170,12 +210,19 @@ spec:
               value: "collector.trace.svc.cluster.local:3200"
           ports:
             - containerPort: 12406
+          resources:
+            requests:
+              cpu: 400m
+              memory: 400Mi
+            limits:
+              cpu: 400m
+              memory: 800Mi
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: eureka-server
+  name: eureka-serverƒ
   namespace: ase-ns-14
 spec:
   type: NodePort
