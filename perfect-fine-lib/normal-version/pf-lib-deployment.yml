@@ -1,0 +1,440 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pflib-frontend
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: pflib-frontend
+  template:
+    metadata:
+      labels:
+        app: pflib-frontend
+    spec:
+      containers:
+        - name: pflib-frontend
+          image: registry.cn-shanghai.aliyuncs.com/akasakaisami/pflib-front-k8s
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: eureka-service
+  template:
+    metadata:
+      labels:
+        app: eureka-service
+    spec:
+      containers:
+        - name: eureka-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/eureka-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8761
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-auth-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: admin-auth-service
+  template:
+    metadata:
+      labels:
+        app: admin-auth-service
+    spec:
+      containers:
+        - name: admin-auth-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/admin-auth-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: admin-service
+  template:
+    metadata:
+      labels:
+        app: admin-service
+    spec:
+      containers:
+        - name: admin-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/admin-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: book-service
+  template:
+    metadata:
+      labels:
+        app: book-service
+    spec:
+      containers:
+        - name: book-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/book-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comment-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: comment-service
+  template:
+    metadata:
+      labels:
+        app: comment-service
+    spec:
+      containers:
+        - name: comment-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/comment-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: copy-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: copy-service
+  template:
+    metadata:
+      labels:
+        app: copy-service
+    spec:
+      containers:
+        - name: copy-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/copy-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: email-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: email-service
+  template:
+    metadata:
+      labels:
+        app: email-service
+    spec:
+      containers:
+        - name: email-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/email-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: gateway-service
+  template:
+    metadata:
+      labels:
+        app: gateway-service
+    spec:
+      containers:
+        - name: gateway-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/gateway-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+        - name: order-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/order-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-auth-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: user-auth-service
+  template:
+    metadata:
+      labels:
+        app: user-auth-service
+    spec:
+      containers:
+        - name: user-auth-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/user-auth-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: pf-lib
+spec:
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: registry.cn-hangzhou.aliyuncs.com/pflibrary/user-service
+          imagePullPolicy: Always
+          env:
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: "skywalking-oap.trace.svc.cluster.local:11800"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pflib-frontend
+  namespace: pf-lib
+spec:
+  type: NodePort
+  selector:
+    app: pflib-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      nodePort: 32677
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eureka-service
+  namespace: pf-lib
+spec:
+  type: NodePort
+  selector:
+    app: eureka-service
+  ports:
+    - protocol: TCP
+      port: 8761
+      nodePort: 32678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin-auth-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: admin-auth-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: admin-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: book-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: comment-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: comment-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: copy-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: copy-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: email-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: email-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: gateway-service
+  ports:
+    - protocol: TCP
+      port: 8087
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: order-service
+  ports:
+    - protocol: TCP
+      port: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-auth-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: user-auth-service
+  ports:
+    - protocol: TCP
+      port: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  namespace: pf-lib
+spec:
+  selector:
+    app: user-service
+  ports:
+    - protocol: TCP
+      port: 8080
