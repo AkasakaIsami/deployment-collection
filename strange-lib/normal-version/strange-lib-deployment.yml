@@ -333,7 +333,7 @@ spec:
     app: mysql
   ports:
     - port: 3306
-      nodePort: 33006
+      nodePort: 30006
 
 ---
 apiVersion: v1
