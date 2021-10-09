@@ -166,7 +166,7 @@ spec:
     spec:
       containers:
         - name: cc-chair-service
-          image: registry.cn-hangzhou.aliyuncs.com/cyber-chair-rth/cc-chair-service:with-agent
+          image: registry.cn-hangzhou.aliyuncs.com/cyber-chair-rth/cc-chair-service:v3
           imagePullPolicy: Always
           env:
             - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
